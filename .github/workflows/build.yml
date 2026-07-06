@@ -5,6 +5,7 @@ on:
     - cron: '0 0 * * *'
   push:
     branches: [ main ]
+    paths-ignore: [ '**.md' ]
   workflow_dispatch:
     inputs:
       image_to_build:
