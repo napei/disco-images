@@ -42,4 +42,5 @@ export button work, run a `kroki` service (image `yuzutech/kroki`, with the
 pod's network; the editor proxies `/kroki/*` to it. Without a `kroki` service the
 editor still works — only the Kroki export link is inert.
 
-Pinned to upstream tag `v2.0.67`.
+Built from upstream `master` (rebuilt daily). Each image is tagged with the exact
+upstream package version and short commit SHA, plus `latest`.

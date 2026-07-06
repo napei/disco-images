@@ -1,6 +1,6 @@
 # Ad-free build of the Mermaid Live Editor.
 #
-# The workflow checks the upstream source out into ./mermaid-src (pinned tag), so the
+# The workflow checks the upstream source out into ./mermaid-src (from master), so the
 # build context is this directory. All MERMAID_* knobs are Vite-inlined at build time,
 # so they are set here as ENV (loadEnv picks up MERMAID_*-prefixed process env):
 #   MERMAID_RENDERER_URL=""        removes the external mermaid.ink PNG/SVG links.
