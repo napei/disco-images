@@ -1,0 +1,2 @@
+# Upstream sources are checked out by CI at build time, never committed.
+mermaid-live-editor/mermaid-src/
