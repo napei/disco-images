@@ -42,5 +42,14 @@ export button work, run a `kroki` service (image `yuzutech/kroki`, with the
 pod's network; the editor proxies `/kroki/*` to it. Without a `kroki` service the
 editor still works — only the Kroki export link is inert.
 
+**Runtime dependencies (optional, for Kroki export only):** these are *not* built
+here — pull them from upstream (mirror into your registry for disconnected use):
+- `yuzutech/kroki` — the Kroki gateway (`:8000`)
+- `yuzutech/kroki-mermaid` — the Mermaid companion the gateway delegates to (`:8002`,
+  wired via `KROKI_MERMAID_HOST`)
+
+There are no build-time dependencies to source separately; the upstream editor source
+is fetched by CI at build.
+
 Built from upstream `master` (rebuilt daily). Each image is tagged with the exact
 upstream package version and short commit SHA, plus `latest`.
