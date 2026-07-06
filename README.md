@@ -36,7 +36,8 @@ banners and upsell links enabled; this build turns them off:
   just the browser URL) work on whatever hostname serves it.
 
 **Run it:** serves on `:8080` (non-root nginx, so it runs under restricted container
-platforms). Diagrams render in-browser with no dependencies. To make the **Kroki**
+platforms like OpenShift `restricted-v2` — as do both Kroki images: non-root, arbitrary
+UID, no added capabilities). Diagrams render in-browser with no dependencies. To make the **Kroki**
 export button work, run a `kroki` service (image `yuzutech/kroki`, with the
 `yuzutech/kroki-mermaid` companion) reachable at `http://kroki:8000` from the editor
 pod's network; the editor proxies `/kroki/*` to it. Without a `kroki` service the
